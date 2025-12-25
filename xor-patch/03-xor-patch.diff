@@ -1,0 +1,14 @@
+diff --git a/src/openvpn/options.h b/src/openvpn/options.h
+index 16cfdb53..16b76ddc 100644
+--- a/src/openvpn/options.h
++++ b/src/openvpn/options.h
+@@ -119,6 +119,9 @@ struct connection_entry
+     int connect_retry_seconds;
+     int connect_retry_seconds_max;
+     int connect_timeout;
++    int xormethod;
++    const char *xormask;
++    int xormasklen;
+     struct http_proxy_options *http_proxy_options;
+     const char *socks_proxy_server;
+     const char *socks_proxy_port;
