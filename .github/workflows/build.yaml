@@ -19,6 +19,8 @@ jobs:
         uses: actions/checkout@v4
         with:
           submodules: true
+      - name: Apply xor patches
+        run: git apply xor-patch/*.diff --directory="main/src/main/cpp/openvpn"
       - name: set up JDK 17
         uses: actions/setup-java@v4
         with:
